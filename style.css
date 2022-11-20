@@ -1,0 +1,94 @@
+body {
+  background: rgba(255, 255, 255, 1);
+  font-family: Inter;
+}
+
+h1 {
+  color: rgba(26, 26, 26, 1);
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 936px;
+  z-index: 0;
+  width: 400px;
+}
+
+.titleVoodo {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(26, 26, 26, 1);
+  line-height: 138%;
+  font-style: mixed;
+}
+
+.address {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(26, 26, 26, 1);
+  line-height: 138%;
+}
+
+.info {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(133, 133, 133, 1);
+  line-height: 138%;
+}
+
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.info-card {
+  align-content: left;
+  text-align: left;
+  width: 244px;
+  height: 161px;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  display: none;
+}
+
+.map-block {
+  position: relative;
+}
+
+.all-card {
+  padding-left: 7%;
+  padding-right: 13%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+}
+
+.input-grid {
+  padding: 20px 30px;
+}
