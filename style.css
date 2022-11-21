@@ -3,20 +3,13 @@ body {
   font-family: Inter;
 }
 
-h1 {
+.h2 {
   color: rgba(26, 26, 26, 1);
   font-family: "Avenir Next";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-}
-
-/* Set the size of the div element that contains the map */
-#map {
-  height: 936px;
-  z-index: 0;
-  width: 400px;
 }
 
 .titleVoodo {
@@ -44,25 +37,28 @@ h1 {
   line-height: 138%;
 }
 
+.header {
+  margin-bottom: 20px;
+}
+
 .title {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 70%;
   line-height: 28px;
 }
 
 .info-card {
   align-content: left;
   text-align: left;
-  width: 244px;
-  height: 161px;
+  width: 200px;
+  height: 145px;
   background: white;
   position: absolute;
   z-index: 2;
-  top: 50px;
-  left: 0;
-  display: none;
+  top: 24%;
+  right: 24%;
 }
 
 .map-block {
@@ -76,19 +72,206 @@ h1 {
   padding-bottom: 10%;
 }
 
+#map {
+  height: 37em;
+  z-index: 0;
+  width: 25em;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding: 4%;
 }
 
-.grid-body {
+.background1 {
+  position: absolute;
+  left: -45px;
+  border-radius: 50%;
+  background: rgba(183, 152, 145, 1);
+  width: 780px;
+  height: 700px;
+  opacity: 10%;
+  top: -44px;
+  z-index: 0;
+  filter: blur(1.5rem);
+}
+
+.background2 {
+  position: absolute;
+  left: -46px;
+  border-radius: 50%;
+  background: rgba(111, 132, 136, 1);
+  width: 200px;
+  height: 100px;
+  opacity: 10%;
+  bottom: -100px;
+  z-index: 1;
+  filter: blur(1.5rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 14%;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 13%);
+  grid-template-columns: repeat(4, 65%);
+  grid-template-areas:
+    "grid-item grid-title"
+    "grid-practice grid-email"
+    "grid-number grid-medical"
+    "grid-type grid-type"
+    "grid-message grid-message";
+  gap: 5% 7%;
+  z-index: 5;
+}
+
+.grid-item,
+.grid-title,
+.grid-practice,
+.grid-email,
+.grid-number,
+.grid-medical,
+.grid-type,
+.grid-message {
+  border-radius: 0.5rem;
+  padding-left: 9%;
+  background: #ffffff;
+  border: none;
 }
 
 .grid-item {
+  grid-area: grid-item;
 }
 
-.input-grid {
-  padding: 20px 30px;
+.grid-title {
+  grid-area: grid-title;
+}
+
+.grid-practice {
+  grid-area: grid-practice;
+}
+
+.grid-email {
+  grid-area: grid-email;
+}
+
+.grid-number {
+  grid-area: grid-number;
+}
+
+.grid-medical {
+  grid-area: grid-medical;
+}
+
+.grid-type {
+  grid-area: grid-type;
+  padding: 4%;
+}
+
+.grid-message {
+  grid-area: grid-message;
+  height: 250%;
+  resize: none;
+  padding: 14px;
+}
+
+button {
+  position: absolute;
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  padding: 1% 2%;
+  margin-top: 13%;
+  border-radius: 0.5rem;
+  z-index: 4;
+}
+
+button:active {
+  border: dashed white;
+}
+
+input::placeholder {
+  color: rgba(65, 64, 66, 1);
+  opacity: 0.5;
+  font-size: 75%;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+option:disabled {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  color: rgba(65, 64, 66, 1);
+}
+
+select {
+  font-weight: 400;
+  font-family: Inter;
+  color: rgba(65, 64, 66, 1);
+  opacity: 0.5;
+  font-size: 65%;
+  line-height: 28px;
+}
+
+.grid-message::placeholder {
+  position: absolute;
+  font-weight: 400;
+  font-family: Inter;
+  color: rgba(65, 64, 66, 1);
+  opacity: 0.5;
+  font-size: 75%;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 480px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(9, 11%);
+    grid-template-columns: repeat(9, 117%);
+    grid-template-areas:
+      "grid-item"
+      "grid-title"
+      "grid-practice"
+      "grid-email"
+      "grid-number"
+      "grid-medical"
+      "grid-type"
+      "grid-message";
+    gap: 5% 7%;
+    z-index: 5;
+  }
+  .grid-message {
+    height: 380%;
+  }
+  #map {
+    height: 38em;
+    z-index: 0;
+    width: 24em;
+    margin-top: 63%;
+  }
+  .info-card {
+    top: 133%;
+  }
+  input::placeholder {
+    font-size: 85%;
+  }
+  .grid-message::placeholder {
+    font-size: 85%;
+  }
+  select {
+    font-size: 75%;
+  }
 }
